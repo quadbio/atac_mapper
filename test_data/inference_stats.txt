@@ -1,0 +1,15 @@
+Topic Distribution Statistics
+===========================
+
+Number of cells: 10
+Number of topics: 5
+Average topic probability: 0.2000
+Max topic probability: 1.0000
+Min topic probability: 0.0000
+
+Per-topic mean probabilities:
+Topic 0: 0.0401
+Topic 1: 0.2057
+Topic 2: 0.1742
+Topic 3: 0.2412
+Topic 4: 0.3388

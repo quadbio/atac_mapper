@@ -10,6 +10,7 @@ __pycache__/
 
 # Distribution / packaging
 /dist/
+*.egg-info/
 
 # Tests and coverage
 /data/

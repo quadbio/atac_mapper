@@ -1,7 +1,8 @@
+"""Single-cell chromatin accessibility analysis toolkit."""
+
 from importlib.metadata import version
 
-from . import pl, pp, tl
+from . import topic_matching
 
-__all__ = ["pl", "pp", "tl"]
-
+__all__ = ["topic_matching"]
 __version__ = version("atac_mapper")
