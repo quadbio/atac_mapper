@@ -20,7 +20,7 @@ def infer_topic_distribution(tf_vector, topic_word, n_topics, n_words, n_iterati
         topic_dist: Inferred topic distribution for the document
     """
     # Print input shapes for debugging
-    print(f"Input shapes - tf_vector: {tf_vector.shape}, topic_word: {topic_word.shape}")
+    # print(f"Input shapes - tf_vector: {tf_vector.shape}, topic_word: {topic_word.shape}")
 
     # If the cell has no counts, return uniform distribution
     if np.sum(tf_vector) == 0:

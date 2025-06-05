@@ -24,13 +24,17 @@ classifiers = [
   "Programming Language :: Python :: 3.13",
 ]
 dependencies = [
-  "anndata",
-  "cloudpickle",
-  "joblib",
-  "numpy",
-  "pandas",
+  "anndata>=0.9",
+  "cellmapper>=0.1",
+  "cloudpickle>=2.2",
+  "joblib>=1.3",
+  "numpy>=1.24",
+  "pandas>=2",
   "scanpy>=1.11",
-  "scipy",
+  "scarches>=0.5",
+  "scipy>=1.11",
+  "scvi-tools>=1",
+  "torch>=2",
 ]
 
 optional-dependencies.dev = [
@@ -119,6 +123,10 @@ lint.pydocstyle.convention = "numpy"
 [tool.pytest]
 testpaths = [ "tests" ]
 python_files = [ "test_*.py" ]
+addopts = "--import-mode=importlib"
+pythonpath = [
+  "src",
+]
 
 [tool.pytest.ini_options]
 testpaths = [ "tests" ]
