@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import os
+
+os.environ["SCIPY_ARRAY_API"] = "1"  # for scarches compatibility with scipy 1.11+
 from typing import Literal
 
 import anndata as ad
