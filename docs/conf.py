@@ -28,9 +28,9 @@ version = info["Version"]
 project_urls = info.get_all("Project-URL")
 if project_urls:
     urls = dict(pu.split(", ") for pu in project_urls)
-    repository_url = urls.get("Source", "https://github.com/azbukinanadezda/atac_mapper")
+    repository_url = urls.get("Source", "https://github.com/quadbio/atac_mapper")
 else:
-    repository_url = "https://github.com/azbukinanadezda/atac_mapper"
+    repository_url = "https://github.com/quadbio/atac_mapper"
 
 # The full version, including alpha/beta/rc tags
 release = info["Version"]
@@ -42,7 +42,7 @@ needs_sphinx = "4.0"
 
 html_context = {
     "display_github": True,  # Integrate GitHub
-    "github_user": "azbukinanadezda",
+    "github_user": "quadbio",
     "github_repo": project_name,
     "github_version": "main",
     "conf_py_path": "/docs/",

@@ -1,12 +1,12 @@
-# Atac
+# Atac Mapper
 
 [![Tests][badge-tests]][tests]
 [![Documentation][badge-docs]][documentation]
 
-[badge-tests]: https://img.shields.io/github/actions/workflow/status/azbukinanadezda/atac_mapper/test.yaml?branch=main
+[badge-tests]: https://img.shields.io/github/actions/workflow/status/quadbio/atac_mapper/test.yaml?branch=main
 [badge-docs]: https://img.shields.io/readthedocs/atac_mapper
 
-Map query scATAC-seq data to a single-cell chromatin accessibility atlas
+Map query scATAC-seq data to a single-cell chromatin accessibility atlas using cisTopics.
 
 ## Getting started
 
@@ -31,7 +31,7 @@ pip install atac_mapper
 1. Install the latest development version:
 
 ```bash
-pip install git+https://github.com/azbukinanadezda/atac_mapper.git@main
+pip install git+https://github.com/quadbio/atac_mapper.git@main
 ```
 
 ## Release notes
@@ -61,8 +61,8 @@ If you find AtacMapper useful in your research, please, cite the following artic
 
 [uv]: https://github.com/astral-sh/uv
 [scverse discourse]: https://discourse.scverse.org/
-[issue tracker]: https://github.com/azbukinanadezda/atac_mapper/issues
-[tests]: https://github.com/azbukinanadezda/atac_mapper/actions/workflows/test.yaml
+[issue tracker]: https://github.com/quadbio/atac_mapper/issues
+[tests]: https://github.com/quadbio/atac_mapper/actions/workflows/test.yaml
 [documentation]: https://atac_mapper.readthedocs.io
 [changelog]: https://atac_mapper.readthedocs.io/en/latest/changelog.html
 [api documentation]: https://atac_mapper.readthedocs.io/en/latest/api.html
