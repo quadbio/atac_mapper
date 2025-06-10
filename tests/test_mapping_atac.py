@@ -4,7 +4,11 @@ os.environ["SCIPY_ARRAY_API"] = "1"
 import anndata as ad
 import numpy as np
 import pytest
-from scarches.models.scpoli import scPoli
+
+try:
+    from scarches.models.scpoli import scPoli
+except ImportError as e:
+    pytest.skip(f"scarches import failed: {e}", allow_module_level=True)
 
 from atac_mapper.reference_mapping.mapping_atac import AtlasMapper
 

@@ -24,7 +24,6 @@ classifiers = [
   "Programming Language :: Python :: 3.13",
 ]
 dependencies = [
-  "anndata>=0.9",
   "cellmapper>=0.1",
   "cloudpickle>=2.2",
   "joblib>=1.3",
@@ -32,6 +31,7 @@ dependencies = [
   "pandas>=2",
   "scanpy>=1.11",
   "scarches>=0.5",
+
   "scipy>=1.11",
   "scvi-tools>=1",
   "torch>=2",
