@@ -121,6 +121,11 @@ class AtlasMapper:
         -------
             AnnData object with query data mapped to reference
         """
+        # Validate retrain parameter
+        valid_retrain_options = ["partial", "full", "none"]
+        if retrain not in valid_retrain_options:
+            raise ValueError(f"retrain must be one of {valid_retrain_options}, got '{retrain}'")
+
         # Check features match and validate layers
         self._validate_features(query_adata, query_layer)
 
@@ -154,9 +159,13 @@ class AtlasMapper:
         labeled_indices = [] if labeled_indices is None else labeled_indices
 
         # Set cell type to unknown if not present
-        missing_cell_types = np.setdiff1d(np.array(self.ref_model.cell_type_keys_), query_adata.obs.columns)
+        # Filter out None values from cell_type_keys_
+        valid_cell_type_keys = [key for key in self.ref_model.cell_type_keys_ if key is not None]
+        missing_cell_types = np.setdiff1d(np.array(valid_cell_type_keys), query_adata.obs.columns)
+
         if len(missing_cell_types) > 0:
-            query_adata.obs[missing_cell_types] = "Unknown"
+            for cell_type in missing_cell_types:
+                query_adata.obs[cell_type] = "Unknown"
 
         vae_q = self.scarches.models.scPoli.load_query_data(
             query_adata,

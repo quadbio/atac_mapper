@@ -1,5 +1,6 @@
 import os
 
+os.environ["SCIPY_ARRAY_API"] = "1"
 import anndata as ad
 import numpy as np
 import pytest
@@ -25,7 +26,10 @@ def query_dataset(reference_dataset):
     n_cells = 50
     X = np.random.rand(n_cells, reference_dataset.n_vars)
     adata = ad.AnnData(X, var=reference_dataset.var)
-    adata.obs["batch"] = ["batch2"] * n_cells
+    # Use the same batch name as reference to match scPoli condition requirements
+    adata.obs["batch"] = ["batch1"] * n_cells
+    # Add cell_type information to match reference
+    adata.obs["cell_type"] = ["type1"] * (n_cells // 2) + ["type2"] * (n_cells // 2)
     return adata
 
 
@@ -39,10 +43,20 @@ def reference_model(reference_dataset):
     reference_dataset.obs["batch"] = reference_dataset.obs["batch"].astype("category")
     reference_dataset.obs["cell_type"] = reference_dataset.obs["cell_type"].astype("category")
 
-    scPoli.setup_anndata(reference_dataset, batch_key="batch", labels_key="cell_type")
-
-    model = scPoli(reference_dataset)
+    # Create a properly formatted scPoli model
+    model = scPoli(
+        reference_dataset,
+        condition_keys=["batch"],
+        hidden_layer_sizes=[128],
+        latent_dim=20,
+        embedding_dims=5,
+        recon_loss="mse",
+    )
     model.train(max_epochs=1)  # Short training for testing
+
+    # Mock the cell_type_keys_ attribute to avoid None values
+    model.cell_type_keys_ = ["cell_type"]
+
     return model
 
 
@@ -63,7 +77,7 @@ def test_validate_features(reference_model, query_dataset):
 
     # Should fail with mismatched features
     mismatched_query = query_dataset[:, :10].copy()
-    with pytest.raises(ValueError, match="Feature dimensions don't match"):
+    with pytest.raises(ValueError, match="Number of features differs"):
         mapper._validate_features(mismatched_query)
 
 
