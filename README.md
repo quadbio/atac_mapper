@@ -10,8 +10,8 @@ Map query scATAC-seq data to a single-cell chromatin accessibility atlas using c
 
 ## Getting started
 
-Please refer to the [documentation][https://atac-mapper.readthedocs.io/en/latest/index.html],
-in particular, the [API documentation][https://atac-mapper.readthedocs.io/en/latest/api.html].
+Please refer to the [documentation][],
+in particular, the [API documentation][].
 
 ## Installation
 
@@ -63,9 +63,9 @@ If you find AtacMapper useful in your research, please, cite the following artic
 [scverse discourse]: https://discourse.scverse.org/
 [issue tracker]: https://github.com/quadbio/atac_mapper/issues
 [tests]: https://github.com/quadbio/atac_mapper/actions/workflows/test.yaml
-[documentation]: https://atac_mapper.readthedocs.io
+[documentation]: https://atac-mapper.readthedocs.io/en/latest/index.html
 [changelog]: https://atac_mapper.readthedocs.io/en/latest/changelog.html
-[api documentation]: https://atac_mapper.readthedocs.io/en/latest/api.html
+[api documentation]: https://atac-mapper.readthedocs.io/en/latest/api.html
 [pypi]: https://pypi.org/project/atac_mapper
 
 <!-- Example of additional links you might want to add -->
