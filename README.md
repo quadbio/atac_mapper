@@ -1,4 +1,4 @@
-# atac_mapper
+# Atac
 
 [![Tests][badge-tests]][tests]
 [![Documentation][badge-docs]][documentation]
@@ -45,7 +45,19 @@ If you found a bug, please use the [issue tracker][].
 
 ## Citation
 
-> t.b.a
+If you find AtacMapper useful in your research, please, cite the following article:
+
+```bibtex
+@article{azbukina2025multiomic,
+  title={Multi-omic human neural organoid cell atlas of the posterior brain},
+  author={Azbukina, Nadezhda and He, Zhisong and Lin, Hsiu-Chuan and Santel, Malgorzata and Kashanian, Bijan and Maynard, Ashley and T{\"o}r{\"o}k, Tivadar and Okamoto, Ryoko and Nikolova, Marina and Kanton, Sabina and Br{\"o}samle, Valentin and Holtackers, Rene and Camp, J Gray and Treutlein, Barbara},
+  journal={bioRxiv},
+  pages={2025--03},
+  year={2025},
+  publisher={Cold Spring Harbor Laboratory},
+  doi={10.1101/2025.03.20.644368}
+}
+```
 
 [uv]: https://github.com/astral-sh/uv
 [scverse discourse]: https://discourse.scverse.org/

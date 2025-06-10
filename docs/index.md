@@ -11,5 +11,6 @@ changelog.md
 contributing.md
 references.md
 
-notebooks/example
+notebooks/reference_matching
+notebooks/topic_matching_tutorial
 ```

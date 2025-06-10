@@ -1,39 +1,50 @@
 # API
 
-## Preprocessing
+## Reference Mapping
 
 ```{eval-rst}
-.. module:: atac_mapper.pp
-.. currentmodule:: atac_mapper
+.. module:: atac_mapper.reference_mapping.mapping_atac
+.. currentmodule:: atac_mapper.reference_mapping.mapping_atac
 
 .. autosummary::
     :toctree: generated
 
-    pp.basic_preproc
-    pp.elaborate_example
+    AtlasMapper
 ```
 
-## Tools
+## Topic Matching
 
 ```{eval-rst}
-.. module:: atac_mapper.tl
-.. currentmodule:: atac_mapper
+.. module:: atac_mapper.topic_matching
+.. currentmodule:: atac_mapper.topic_matching
 
 .. autosummary::
     :toctree: generated
 
-    tl.basic_tool
+    TopicMatch
 ```
 
-## Plotting
+### Topic Analysis Functions
 
 ```{eval-rst}
-.. module:: atac_mapper.pl
-.. currentmodule:: atac_mapper
+.. module:: atac_mapper.topic_matching.topic_match
+.. currentmodule:: atac_mapper.topic_matching.topic_match
 
 .. autosummary::
     :toctree: generated
 
-    pl.basic_plot
-    pl.BasicClass
+    TopicMatch
+    infer_topic_distribution
+```
+
+### Utilities
+
+```{eval-rst}
+.. module:: atac_mapper.topic_matching.utils
+.. currentmodule:: atac_mapper.topic_matching.utils
+
+.. autosummary::
+    :toctree: generated
+
+    infer_topic_distribution
 ```
