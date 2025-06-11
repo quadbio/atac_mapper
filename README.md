@@ -20,15 +20,15 @@ If you don't have Python installed, we recommend installing [uv][].
 
 There are several alternative options to install atac_mapper:
 
-<!--
-1) Install the latest release of `atac_mapper` from [PyPI][]:
+1. Install the latest release of `atac_mapper` from [PyPI][]:
+
 
 ```bash
-pip install atac_mapper
+pip install atac-mapper
 ```
--->
 
-1. Install the latest development version:
+
+2. Install the latest development version:
 
 ```bash
 pip install git+https://github.com/quadbio/atac_mapper.git@main
