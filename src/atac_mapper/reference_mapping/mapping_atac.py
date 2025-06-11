@@ -98,7 +98,7 @@ class AtlasMapper:
         retrain: Literal["partial", "full", "none"] = "partial",
         labeled_indices: np.ndarray | None = None,
         query_layer: str | None = None,
-        embed_key: str | None = None,
+        embed_key: str | None = "X_scpoli",
         **kwargs,
     ) -> ad.AnnData:
         """

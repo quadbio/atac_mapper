@@ -21,4 +21,6 @@ __pycache__/
 # docs
 /docs/generated/
 /docs/_build/
-/docs/notebooks/
+/docs/notebooks/tutorials/scpoli_atlas_mapper
+/docs/notebooks/tutorials/scpoli_reference_model
+/docs/notebooks/tutorials/topic_inference_results.tsv
