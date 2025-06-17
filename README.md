@@ -8,6 +8,10 @@
 
 Map query scATAC-seq data to a single-cell chromatin accessibility atlas using cisTopics.
 
+<img src="docs/img/Schematic_atac_mapper.png" alt="Alt text" width="700"/>
+
+
+
 ## Getting started
 
 Please refer to the [documentation][],
